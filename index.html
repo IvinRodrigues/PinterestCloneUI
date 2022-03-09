@@ -1,25 +1,239 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://unpkg.com/handsfree@8.5.1/build/lib/handsfree.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-    <button onclick="manipularMenu()">Abrir menu</button>
+    <header class="main-header" id="mainHeader">
 
-    <ul class="main-menu main-menu-opened" id="mainMenu">
+        <nav>
 
-        <li><button onclick="manipularMenu()">Fechar menu</button></li>
-        <li>Item 1</li>
-        <li>Item 2</li>
+            <img src="https://logosmarcas.net/wp-content/uploads/2020/09/Pinterest-Logo-2011-presente.png">
 
-    </ul>
+            <section class="input-wrapper">
+                <span class="material-icons">search</span>
+                <input type="text" placeholder="Search" onclick="headerHandler()">
+            </section>
 
+            <section class="options">
+                <span class="material-icons">notifications</span>
+                <span class="material-icons">textsms</span>
+                <img src="https://media-exp1.licdn.com/dms/image/C4D03AQHg1RrzXrZ7mw/profile-displayphoto-shrink_800_800/0/1612056394578?e=1652313600&v=beta&t=CxaSRbNWBz281n7ep4nQ8mVQgqqxtCCrBQKMYhGywa8">
+            </section>
+
+        </nav>
+
+        <section class="recomendations">
+
+            <h1>Ideas for you</h1>
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <section class="idea">
+                        <h1>Wallpapers</h1>
+                        <img src="https://i.pinimg.com/564x/ac/74/6a/ac746acc44a126aae2dc73e2cbfcdc54.jpg">
+                    </section>
+                  </div>
+                  <div class="swiper-slide">
+                    <section class="idea">
+                        <h1>Mangas</h1>
+                        <img src="https://i.pinimg.com/564x/37/42/f2/3742f2ffcb5fd80c7bc58d141647f71f.jpg">
+                    </section>
+                  </div>
+                  <div class="swiper-slide">
+                    <section class="idea">
+                        <h1>Renascence</h1>
+                        <img src="https://i.pinimg.com/564x/d6/c8/d1/d6c8d1ca51bd6072e7ac57169fd68b88.jpg">
+                    </section>
+                  </div>
+                  <div class="swiper-slide">
+                    <section class="idea">
+                        <h1>Games</h1>
+                        <img src="https://i.pinimg.com/564x/c2/53/9b/c2539b60237ef1d087bf3a3ec95ca422.jpg">
+                    </section>
+                  </div>
+                  <div class="swiper-slide">
+                    <section class="idea">
+                        <h1>Obscure Art</h1>
+                        <img src="https://i.pinimg.com/564x/30/7c/39/307c398d288692f983687f80deaf7b0b.jpg">
+                    </section>
+                  </div>
+                  <div class="swiper-slide">
+                    <section class="idea">
+                        <h1>More Ideas</h1>
+                        <img src="https://i.pinimg.com/564x/86/b0/7f/86b07fbca83fd930f0757220b4972faf.jpg">
+                    </section>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </section>
+
+    </header>
+
+    <main class="gird">
+
+        <div class="column">
+
+            <img src="https://i.pinimg.com/originals/77/41/47/774147467473b63c7a41eac03e64176f.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/564x/ac/12/95/ac129579e89fc674957275f35c003586.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/originals/77/41/47/774147467473b63c7a41eac03e64176f.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/564x/ac/12/95/ac129579e89fc674957275f35c003586.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/originals/77/41/47/774147467473b63c7a41eac03e64176f.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/564x/ac/12/95/ac129579e89fc674957275f35c003586.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+
+        </div>
+
+        <div class="column">
+
+            <img src="https://i.pinimg.com/originals/e1/d2/4f/e1d24fe3396ce959d9340b8717e47324.gif" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/originals/02/92/8d/02928d4e680e827a6dd8fbd18e83891e.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/564x/20/c0/60/20c0600b51d54505cd10ac7aefa2b08a.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/originals/e1/d2/4f/e1d24fe3396ce959d9340b8717e47324.gif" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/originals/02/92/8d/02928d4e680e827a6dd8fbd18e83891e.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/564x/20/c0/60/20c0600b51d54505cd10ac7aefa2b08a.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+
+        </div>
+
+        <div class="column">
+
+            <img src="https://i.pinimg.com/564x/df/64/0f/df640fd2088c9e8382614e1ef10892c6.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/236x/49/08/6a/49086a13f017b412b2976ebcbce67e53.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/236x/dc/4f/81/dc4f81d93baa96059f9e6ee9dbbbcc9a.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/564x/df/64/0f/df640fd2088c9e8382614e1ef10892c6.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/236x/49/08/6a/49086a13f017b412b2976ebcbce67e53.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/236x/dc/4f/81/dc4f81d93baa96059f9e6ee9dbbbcc9a.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+
+        </div>
+
+        <div class="column">
+
+            <img src="https://i.pinimg.com/736x/34/63/c0/3463c0b0e5c61f209ceb34148bb6df5f.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/564x/95/e4/a0/95e4a0b0dfc5e3b503b0b01eb6f8c2ed.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/236x/21/d7/ce/21d7cefb83d7b912bbe3696e2147967e.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/736x/34/63/c0/3463c0b0e5c61f209ceb34148bb6df5f.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/564x/95/e4/a0/95e4a0b0dfc5e3b503b0b01eb6f8c2ed.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/236x/21/d7/ce/21d7cefb83d7b912bbe3696e2147967e.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+
+        </div>
+
+        <div class="column">
+
+            <img src="https://i.pinimg.com/564x/de/49/df/de49dfc936514b18ce07b61eaa093ff0.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/236x/43/5c/03/435c037f31511756e5005012b5e9908e.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/236x/e5/af/ca/e5afca1b5e125d1fc00272dd23395ecd.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/564x/de/49/df/de49dfc936514b18ce07b61eaa093ff0.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/236x/43/5c/03/435c037f31511756e5005012b5e9908e.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/236x/e5/af/ca/e5afca1b5e125d1fc00272dd23395ecd.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+
+        </div>
+
+        <div class="column">
+
+            <img src="https://i.pinimg.com/564x/0d/43/16/0d431662f60b981be487de4479316615.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/236x/44/83/b8/4483b8bc0f4a21775d415cda254cbb34.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/236x/e6/7b/ce/e67bceb434976760cb18fe34515ba6b7.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/564x/0d/43/16/0d431662f60b981be487de4479316615.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/236x/44/83/b8/4483b8bc0f4a21775d415cda254cbb34.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+            <img src="https://i.pinimg.com/236x/e6/7b/ce/e67bceb434976760cb18fe34515ba6b7.jpg" onclick="openModal(this)" data-aos="fade-up" data-aos-duration="600">
+
+        </div>
+
+    </main>
+
+    <div class="morph" id="morph"></div>
+
+    <section class="modal" id="modal" onclick="closeModal()">
+
+        <img src="https://i.pinimg.com/236x/c0/a4/8c/c0a48c8dfbef06a73423fe6573f2d3c6.jpg" class="image-preview" id="imagePreview">
+
+        <main>
+
+            <section class="options">
+
+                <div class="primary-options">
+
+                    <span class="material-icons">settings</span>
+                    <span class="material-icons">file_upload</span>
+                    <span class="material-icons">link</span>
+
+                </div>
+
+                <button>save</button>
+
+            </section>
+
+            <h1 class="modal-title">uploaded by <b>Ivin</b></h1>
+
+            <h2>Post title</h2>
+
+            <section class="profile">
+
+                <div class="informations">
+                    <img src="https://media-exp1.licdn.com/dms/image/C4D03AQHg1RrzXrZ7mw/profile-displayphoto-shrink_800_800/0/1612056394578?e=1652313600&v=beta&t=CxaSRbNWBz281n7ep4nQ8mVQgqqxtCCrBQKMYhGywa8" alt="">
+                    <div class="details">
+                        <h1>Ivin</h1>
+                        <p>666 followers</p>
+                    </div>
+                </div>
+
+                <button>follow</button>
+
+            </section>
+
+        </main>
+
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="./main.js"></script>
 
+    <script>
+
+        // handsfree = new Handsfree({ weboji: true })
+
+        // $rig = document.querySelector('#element')
+
+        // Create the plugin
+        // handsfree.use('lookHandsfree', ({ weboji }) => {
+            // Bail if we don't have weboji data
+            // if (!weboji.degree) return
+
+            // [yaw, pitch, roll]
+            // const rot = weboji.degree
+
+            // Let's shift the yaw slightly
+            // - this assumes webcam is slightly below eye level, like on a laptop
+            // rot[0] += 15
+
+            // Calculate position
+            // - Positions are normalized between [0, 1]
+            // - 0 is all the way to the left of the canvas, 1 all the way to the right
+            // - Change the multiplier to change the range you want to move by
+            // const pos = {
+                // Subtract .5 to "center" the x value
+                // x: 50 - weboji.translation[0] * 100,
+                // Subtract .5 to "center" the y value
+                // y: 50 - weboji.translation[1] * 100,
+                // Let's position the camera 5 units back from the center of the room
+                // z: 5 - weboji.translation[2] * 100
+            // }
+
+            // Now let's just tell A-Frame to update our camera rig
+            // - We flip yaw/roll because we are "looking into" the aframe vs how the tracker is "looking at" us
+            // - We multiply by 1.5 to make it "look more", so we don't have to physically move our head as much
+            // $rig.setAttribute('rotation', `${-rot[0] * 1.5} ${-rot[1] * 1.5} ${rot[2] * 1.5}`)
+            // $rig.style.transform = `translate(${pos.x}px, ${pos.y}px)`
+        // })
+
+        // Start tracking
+        // handsfree.start()
+
+    </script>
 </body>
-</html>
